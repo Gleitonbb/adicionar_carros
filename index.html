@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <link rel="stylesheet" href="estilo-carros.css">
+</head>
+<body>
+    
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoForm">
+            <label>Nome</label>
+            <input type="text" name="f_nome" id="f_nome" value="">
+        <div class="campoForm">
+            <label>Portas</label>
+            <input type="number" name="f_portas" id="f_portas" value="0">
+        </div>
+        <div class="campoForm">
+            <label>Blindagem</label>
+            <input type="number" name="f_blindagens" id="f_blindagens" disabled value="0">
+        </div>
+        <div class="campoForm">
+            <label>Munição</label>
+            <input type="number" name="f_municao" id="f_municao" disabled value="0">
+        </div>
+        <div class="campoForm">
+            <label>Tipo</label>
+            <div class="radio">
+                <input type="radio" name="f_tipo" id="f_tipomilitar" value="m">Militar
+            </div>
+            <div class="radio">
+                <input type="radio" name="f_tipo" id="f_tipoNormal" value="n">Normal
+            </div>
+           </div>
+           <div class="campoForm">
+            <button id="botaoadd">Adicionar</button>
+           </div>
+         </div>
+         <div id="carros" class="carros">
+            <!-- <div class="carro">Golf</div> -->
+         </div>
+        
+     <script src="carros.js"></script>
+</body>
+</html>
