@@ -24,7 +24,8 @@
     padding: 5px;
     border-radius: 5px;
     display: flex;
-    width: 200px;
+    flex-direction: column;
+    width: 250px;
 }
 .campoForm{
     display: flex;
@@ -43,4 +44,10 @@
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
+}
+button{
+    border: 3px solid rgb(7, 7, 146);
+    cursor: pointer;
+    padding: 3px;
+  
 }

@@ -9,6 +9,13 @@ const botao = document.querySelector("#botaoadd")
 
 let a_carros = []
 
+const quemRemover = (quem) =>{
+   a_carros = a_carros.filter((upu)=>{
+         return upu.nome != quem
+    })
+
+}
+
 tiponormal.addEventListener("click",(evt)=>{
     f_blindagem.value = 0
     f_municao.value = 0
@@ -28,12 +35,26 @@ const GerenciadorDeCarros = () =>{
      carros.innerHTML = ""
     a_carros.forEach((c)=>{
      const Div = document.createElement("div")
-      Div.setAttribute("class","carro")
+     Div.setAttribute("class","carro")
+     Div.setAttribute("data-nome",c.nome)
+
+     const botaorem = document.createElement("button")
+     botaorem.addEventListener("click",(evt)=>{
+     const apontarElemento = evt.target.parentNode.dataset.nome
+     console.log(apontarElemento)
+     quemRemover(apontarElemento)
+     GerenciadorDeCarros()
+       
+     })
       Div.innerHTML = `Nome:${c.nome}<br/>`
       Div.innerHTML += `Portas:${c.portas}<br/>`
       Div.innerHTML += `Blindagem:${c.blindagem}<br/>`
-      Div.innerHTML += `Munição:${c.municao}`
+      Div.innerHTML += `Munição:${c.munic0912ao}`
+      botaorem .innerHTML = "remover"
       carros.appendChild(Div)
+      Div.appendChild(botaorem)
+      
+      
     })
 }
 botao.addEventListener("click",(evt)=>{
